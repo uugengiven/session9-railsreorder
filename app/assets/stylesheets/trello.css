@@ -1,0 +1,17 @@
+.allcards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: hotpink;
+    font-family: 'Rock Salt', cursive;
+    box-shadow: 4px 4px 2px black;
+    width: 11em;
+    height: 11em;
+    padding: 1em;
+    margin: 1em;
+}
+
+.card p {
+    margin: 0;
+}

@@ -1,0 +1,27 @@
+<h1>Trello Cards</h1>
+
+<div class="allcards">
+<% @reader.each do |card| %>
+    <div class="card" id="<%= card.id %>">
+        <p><%= card.title %></p>
+    </div>
+<% end %>
+</div>
+<form method="POST" action="/create" >
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+<input type="text" name="title" />
+<button>Add Card</button>
+</form>
+
+<script>
+    $(".allcards").sortable(
+        {
+            update: ()=> {
+                console.log("hi");
+                // this should actually save by sending
+                // some array to a controller/action
+                // that we haven't made yet
+            }
+        }
+    )
+</script>
